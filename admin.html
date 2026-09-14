@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>IRRIT8 — the soundboard for people you hate</title>
-  <meta name="description" content="A satirical soundboard of the world's most agreed-upon annoying noises, plus Gen Z and Gen Alpha slang packs." />
+  <title>IRRIT8 Admin — all sounds unlocked</title>
+  <meta name="description" content="Admin build of IRRIT8. Every sound pack is unlocked." />
+  <meta name="robots" content="noindex" />
   <link rel="icon" href="assets/icon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -17,11 +18,11 @@
       <img class="logo" src="assets/icon.svg" alt="IRRIT8 icon" />
       <div class="brand">
         <h1>IRRIT8</h1>
-        <p>Scientifically annoying · culturally cursed</p>
+        <p>Admin build · every pack unlocked</p>
       </div>
       <div class="top-actions">
-        <div class="pill admin-pill" id="adminBadge" hidden>ADMIN</div>
-        <div class="pill">Packs owned <strong id="ownedCount">0</strong></div>
+        <div class="pill admin-pill" id="adminBadge">ADMIN</div>
+        <div class="pill">Packs owned <strong id="ownedCount">4</strong></div>
       </div>
     </header>
 
@@ -29,8 +30,8 @@
       <img src="assets/hero.jpg" alt="IRRIT8 banner" />
       <div class="veil"></div>
       <div class="hero-copy">
-        <h2>THE SOUNDBOARD FOR PEOPLE YOU HATE</h2>
-        <p>Fire-alarm chirps, chalkboard physics, and a paid pack of kids yelling “skibidi.” All sounds are synthesized — no stolen clips.</p>
+        <h2>OWNER OVERRIDE</h2>
+        <p>This page unlocks Classic Torture, Brainrot Vocals, Domestic Hell, and Chaos Pass. Bookmark it.</p>
       </div>
     </section>
 
@@ -59,11 +60,7 @@
     </section>
 
     <p class="footnote">
-      <strong>Why these sounds?</strong> Surveys and psychoacoustics keep landing on the same villains:
-      3.1 kHz smoke-alarm beeps, acoustically “rough” alarms (40–80 Hz modulation), knife/fork-on-glass,
-      chalkboard scrape (2–5 kHz), chewing, yapping, snoring, and neighbor-grade domestic noise.
-      The slang pack is the other modern consensus: skibidi, 6-7, rizz, Ohio, sigma, Fanum tax, gyatt, delulu, unc.
-      Checkout is simulated for this prototype — nothing is billed.
+      Admin mode is local to this browser. Open <a href="index.html?admin=0" style="color:#f5c518">the public board</a> to go back to locked packs.
     </p>
   </div>
 
@@ -83,6 +80,7 @@
     </div>
   </div>
   <div class="toast" id="toast"></div>
+  <script>window.IRRIT8_ADMIN = true;</script>
   <script src="app.js"></script>
 </body>
 </html>

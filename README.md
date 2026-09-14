@@ -2,18 +2,14 @@
 
 A satirical soundboard of the most commonly agreed-upon annoying noises, plus Gen Z / Gen Alpha slang shouted through the browser speech engine.
 
-Live files live at the repo root. Open `index.html` or enable GitHub Pages on `main`.
+## Admin version
 
-## Premise
+Owner override lives at `admin.html`. It unlocks every pack in this browser.
 
-People broadly agree on a short list of acoustic crimes:
-
-- High-frequency smoke / fire alarm beeps (~3100 Hz), including the Temporal-3 fire-alarm pattern
-- Acoustically "rough" alarm textures (amplitude fluctuation around 40-80 Hz)
-- Knife or fork on glass, nails on chalkboard (roughly 2-5 kHz)
-- Chewing, snoring, small-dog yapping, flies, knife-on-plate, 2am car alarms
-
-Then there is the other consensus nuisance: hearing "skibidi," "6-7," "rizz," and "that's so Ohio" at full volume.
+- Open [admin.html](admin.html)
+- Or add `?admin=1` to any page
+- Or tap the logo 7 times
+- Turn it off with `?admin=0`
 
 ## Packs (in-app purchases, simulated)
 
@@ -29,18 +25,8 @@ Checkout is fake. Purchases persist in `localStorage` under `irrit8-owned-v1`.
 
 ## Run it
 
-Open `index.html` in a desktop or mobile browser.
+Open `index.html` or `admin.html` in a browser.
 
 ```bash
 python3 -m http.server 8080
 ```
-
-Then visit `http://localhost:8080`.
-
-Audio engines require a user gesture. Tap any pad after load. Use **STOP ALL** if loop mode gets away from you.
-
-## Technical notes
-
-- No third-party sound files. Tones, scrapes, and household noises are synthesized with the Web Audio API.
-- Slang pads use the Web Speech API (`speechSynthesis`) so the vocal pack works without copyrighted clips.
-- This is a high-fidelity web prototype of a mobile soundboard with IAP packs, not a shipped App Store binary.
