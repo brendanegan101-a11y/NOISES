@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>IRRIT8 — the soundboard for people you hate</title>
+  <meta name="description" content="A satirical soundboard of the world's most agreed-upon annoying noises, plus Gen Z and Gen Alpha slang packs." />
+  <link rel="icon" href="assets/icon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <img class="logo" src="assets/icon.svg" alt="IRRIT8 icon" />
+      <div class="brand">
+        <h1>IRRIT8</h1>
+        <p>Scientifically annoying · culturally cursed</p>
+      </div>
+      <div class="top-actions">
+        <div class="pill">Packs owned <strong id="ownedCount">0</strong></div>
+      </div>
+    </header>
+
+    <section class="hero">
+      <img src="assets/hero.jpg" alt="IRRIT8 banner" />
+      <div class="veil"></div>
+      <div class="hero-copy">
+        <h2>THE SOUNDBOARD FOR PEOPLE YOU HATE</h2>
+        <p>Fire-alarm chirps, chalkboard physics, and a paid pack of kids yelling “skibidi.” All sounds are synthesized — no stolen clips.</p>
+      </div>
+    </section>
+
+    <div class="controls">
+      <label class="ctrl">Volume <input id="vol" type="range" min="0" max="1" step="0.01" value="0.7" /></label>
+      <label class="toggle"><input id="loop" type="checkbox" /> Loop (war crime mode)</label>
+      <button class="panic" id="panic">STOP ALL</button>
+    </div>
+
+    <nav class="tabs">
+      <button class="tab active" data-tab="all">All sounds</button>
+      <button class="tab" data-tab="free">Free</button>
+      <button class="tab" data-tab="classic">Classic Torture</button>
+      <button class="tab" data-tab="brainrot">Brainrot</button>
+      <button class="tab" data-tab="domestic">Domestic Hell</button>
+      <button class="tab" data-tab="locked">Locked</button>
+      <button class="tab" id="tab-store" data-view="store">Store</button>
+    </nav>
+
+    <main id="board" class="board">
+      <div class="grid" id="grid"></div>
+    </main>
+
+    <section id="store" class="store">
+      <div class="packs" id="packs"></div>
+    </section>
+
+    <p class="footnote">
+      <strong>Why these sounds?</strong> Surveys and psychoacoustics keep landing on the same villains:
+      3.1 kHz smoke-alarm beeps, acoustically “rough” alarms (40–80 Hz modulation), knife/fork-on-glass,
+      chalkboard scrape (2–5 kHz), chewing, yapping, snoring, and neighbor-grade domestic noise.
+      The slang pack is the other modern consensus: skibidi, 6-7, rizz, Ohio, sigma, Fanum tax, gyatt, delulu, unc.
+      Checkout is simulated for this prototype — nothing is billed.
+    </p>
+  </div>
+
+  <div class="modal-bg" id="modalBg">
+    <div class="modal">
+      <h3 id="modalTitle">Unlock pack</h3>
+      <p id="modalCopy"></p>
+      <div class="pay-row">
+        <input value="4242 4242 4242 4242" readonly />
+      </div>
+      <div class="pay-row">
+        <input value="09 / 29" readonly />
+        <input value="123" readonly />
+      </div>
+      <button class="confirm" id="confirmBuy">Pretend to pay</button>
+      <button class="ghost" id="cancelBuy">Cancel</button>
+    </div>
+  </div>
+  <div class="toast" id="toast"></div>
+  <script src="app.js"></script>
+</body>
+</html>
