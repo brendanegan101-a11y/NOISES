@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>IRRIT8 Admin — all sounds unlocked</title>
-  <meta name="description" content="Admin build of IRRIT8. Every sound pack is unlocked." />
   <meta name="robots" content="noindex" />
   <link rel="icon" href="assets/icon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -25,7 +24,6 @@
         <div class="pill">Packs owned <strong id="ownedCount">4</strong></div>
       </div>
     </header>
-
     <section class="hero">
       <img src="assets/hero.jpg" alt="IRRIT8 banner" />
       <div class="veil"></div>
@@ -34,13 +32,11 @@
         <p>This page unlocks Classic Torture, Brainrot Vocals, Domestic Hell, and Chaos Pass. Bookmark it.</p>
       </div>
     </section>
-
     <div class="controls">
       <label class="ctrl">Volume <input id="vol" type="range" min="0" max="1" step="0.01" value="0.7" /></label>
       <label class="toggle"><input id="loop" type="checkbox" /> Loop (war crime mode)</label>
       <button class="panic" id="panic">STOP ALL</button>
     </div>
-
     <nav class="tabs">
       <button class="tab active" data-tab="all">All sounds</button>
       <button class="tab" data-tab="free">Free</button>
@@ -50,31 +46,16 @@
       <button class="tab" data-tab="locked">Locked</button>
       <button class="tab" id="tab-store" data-view="store">Store</button>
     </nav>
-
-    <main id="board" class="board">
-      <div class="grid" id="grid"></div>
-    </main>
-
-    <section id="store" class="store">
-      <div class="packs" id="packs"></div>
-    </section>
-
-    <p class="footnote">
-      Admin mode is local to this browser. Open <a href="index.html?admin=0" style="color:#f5c518">the public board</a> to go back to locked packs.
-    </p>
+    <main id="board" class="board"><div class="grid" id="grid"></div></main>
+    <section id="store" class="store"><div class="packs" id="packs"></div></section>
+    <p class="footnote">Admin mode is local to this browser. Open <a href="index.html?admin=0" style="color:#f5c518">the public board</a> to lock packs again.</p>
   </div>
-
   <div class="modal-bg" id="modalBg">
     <div class="modal">
       <h3 id="modalTitle">Unlock pack</h3>
       <p id="modalCopy"></p>
-      <div class="pay-row">
-        <input value="4242 4242 4242 4242" readonly />
-      </div>
-      <div class="pay-row">
-        <input value="09 / 29" readonly />
-        <input value="123" readonly />
-      </div>
+      <div class="pay-row"><input value="4242 4242 4242 4242" readonly /></div>
+      <div class="pay-row"><input value="09 / 29" readonly /><input value="123" readonly /></div>
       <button class="confirm" id="confirmBuy">Pretend to pay</button>
       <button class="ghost" id="cancelBuy">Cancel</button>
     </div>
@@ -82,5 +63,6 @@
   <div class="toast" id="toast"></div>
   <script>window.IRRIT8_ADMIN = true;</script>
   <script src="app.js"></script>
+  <script src="admin-override.js"></script>
 </body>
 </html>
